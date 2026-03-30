@@ -20,6 +20,7 @@ const Navbar = () => {
                 <a>Login</a>
                 <a className="btn rounded-2xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white ">Get Started</a>
             </div>
+            <a className="btn rounded-2xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white ">Get Started</a>
         </div>
     )
 }
