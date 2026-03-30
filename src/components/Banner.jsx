@@ -2,7 +2,7 @@ import bannerImg from '../assets/banner.png'
 import playImg from '../assets/Play.png'
 const Banner = () => {
     return(
-        <div className="container mx-auto flex justify-between items-center w-[80%] ">
+        <div className="container mx-auto flex flex-col md:flex-row  gap-2 justify-between items-center w-[80%] ">
             <div className='space-y-6'>
                 <div className="flex items-center mt-10">
                     <div className="flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-medium">
