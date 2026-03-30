@@ -4,11 +4,11 @@ const Banner = () => {
     return(
         <div className="container mx-auto flex justify-between items-center w-[80%] ">
             <div className='space-y-6'>
-                <div class="flex items-center mt-10">
-                    <div class="flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-medium">
+                <div className="flex items-center mt-10">
+                    <div className="flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-medium">
     
     
-                    <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 shadow-sm"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-linear-to-r from-pink-500 to-purple-500 shadow-sm"></span>
     
                     <span>New: AI-Powered Tools Available</span>
     
