@@ -6,6 +6,7 @@ import Infos from './components/Infos'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 import ActiveSection from './components/ActiveSection'
+import StepsSection  from './components/StepsSection'
 
 const fetchInfo = async() => {
   const res = await fetch("/data.json");
@@ -22,6 +23,7 @@ function App() {
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         <Infos infoPromise={infoPromise}></Infos>
       </Suspense>
+      <StepsSection></StepsSection>
 
       <ToastContainer />
       
