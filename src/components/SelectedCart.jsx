@@ -18,7 +18,11 @@ const SelectedCart = ({ selectedCart, setSelectedCart }) => {
     selectedCart.forEach(item => {
         total += item.price;
     });
-
+     
+    const handleCheckout = () => {
+    setSelectedCart([]); 
+    toast.success("Checkout successful!");
+    }
     return (
         <div className="bg-base-100 shadow-sm container mx-auto w-[80%] p-5 rounded-xl">
             <h2 className="font-semibold text-2xl text-[#101727] mb-2">Your Cart</h2>
@@ -58,12 +62,12 @@ const SelectedCart = ({ selectedCart, setSelectedCart }) => {
                     
                     <div className="flex justify-between items-center mt-5 px-2">
                         <p className="text-[#627382] font-medium">Total:</p>
-                        <h2 className="text-xl font-bold text-[#101727]">${total}</h2>
+                        <h2 className="text-xl font-bold text-[#101727]">${total.toFixed(2)}</h2>
                     </div>
 
                     
-                    <button className="w-full mt-5 py-3 rounded-full text-white font-semibold 
-                        bg-linear-to-r from-purple-600 to-pink-500 hover:opacity-90 transition">
+                    <button onClick={handleCheckout} className="w-full mt-5 py-3 rounded-full text-white font-semibold 
+                        bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 transition">
                         Proceed To Checkout
                     </button>
                 </>
