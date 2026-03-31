@@ -1,13 +1,24 @@
 import React, { useState } from 'react'
+import { toast } from "react-toastify";
 
 
 const Cards = ({information ,selectedCart ,setSelectedCart}) => {
     const [isSelected , setIsSelected] = useState(false);
     const handleAddCard = () => {
-        
-    
-        setIsSelected(true);
-        setSelectedCart([...selectedCart , information ]);
+     const exists = selectedCart.find(cart => cart.id === information.id);
+
+    if (exists) {
+        toast.info("Already added !");
+    } else {
+        toast.success(`${information.name} added to cart `);
+    }
+
+    setSelectedCart(
+        exists
+            ? selectedCart
+            : [...selectedCart, information]
+    );
+
         
 
     }
@@ -55,7 +66,12 @@ const Cards = ({information ,selectedCart ,setSelectedCart}) => {
               
                             </ul>
                             <div className="mt-6">
-                                <button onClick={handleAddCard} className="btn btn-primary btn-block rounded-2xl">{isSelected === true ? "Added to Cart" : "Buy Now"}</button>
+                                <button onClick={handleAddCard} className={`btn ${selectedCart.find(cart => cart.id === information.id)
+                                    ? "bg-green-500 text-white"
+                                    : "bg-blue-500 text-white"
+                                     } btn-block rounded-2xl`}>{selectedCart.find(cart => cart.id === information.id) 
+                                ? "Added to Cart !" 
+                                : "Buy Now"}</button>
                             </div>
                         </div>
                     </div>

@@ -16,8 +16,8 @@ const Infos = ({infoPromise}) => {
                 <button onClick={() => setSelectedType('Cart')} className={`btn  ${selectedType === 'Cart' ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" :  "btn btn-ghost"} rounded-2xl  ` }>Cart ({selectedCart.length})</button>
             </div>
             
-             {selectedType === "Products"? <AvailableInfos informations={informations} selectedCart={selectedCart} setSelectedCart={setSelectedCart}></AvailableInfos> :
-             <SelectedCart selectedCart={selectedCart}></SelectedCart>}
+             {selectedType === "Products"? <AvailableInfos informations={informations} selectedCart={selectedCart} setSelectedCart={setSelectedCart} ></AvailableInfos> :
+             <SelectedCart selectedCart={selectedCart} setSelectedCart={setSelectedCart}></SelectedCart>}
         </>
         
     );

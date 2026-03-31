@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Infos from './components/Infos'
 import { Suspense } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 const fetchInfo = async() => {
   const res = await fetch("/data.json");
@@ -19,6 +20,8 @@ function App() {
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         <Infos infoPromise={infoPromise}></Infos>
       </Suspense>
+
+      <ToastContainer />
       
     </>
   )
