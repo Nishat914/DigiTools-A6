@@ -10,6 +10,7 @@ import StepsSection  from './components/StepsSection'
 import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import { useState } from 'react'
+import ReadySection from './components/ReadySection'
 
 const fetchInfo = async() => {
   const res = await fetch("/data.json");
@@ -29,6 +30,7 @@ function App() {
       </Suspense>
       <StepsSection></StepsSection>
       <Pricing></Pricing>
+      <ReadySection></ReadySection>
       <Footer></Footer>
 
       <ToastContainer />

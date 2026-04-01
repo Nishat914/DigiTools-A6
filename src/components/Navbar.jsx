@@ -1,7 +1,7 @@
 import shoppingTool from '../assets/products/shopping-cart.png'
 const Navbar = ({ selectedCart }) => {
     return (
-        <div className="navbar bg-base-100 shadow-sm container mx-auto w-[80%] mb-6 sticky top-0 z-50">
+        <div className="navbar bg-base-100 shadow-sm container mx-auto  mb-6 sticky top-0 z-50">
             
             <div className='navbar-start font-bold text-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'>
                 DigiTools
